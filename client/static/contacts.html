@@ -115,7 +115,9 @@
           <input id="agree" name="agree" type="checkbox" required>
           <label for="agree">Погоджуюсь на обробку персональних даних</label>
         </p>
-        <button class="btn" type="submit">Надіслати</button>
+        <p id="form-hint"><small>Кнопка стане активною, коли всі обов'язкові поля заповнено коректно.</small></p>
+        <button class="btn" type="submit" aria-describedby="form-hint form-status" disabled>Надіслати</button>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
       </form>
     </section>
 
@@ -151,5 +153,6 @@
     <p><small>Cinema-Ua © <time datetime="2026">2026</time>. Навчальний проєкт, сайт не справжній.</small></p>
   </footer>
   <script type="module" src="js/ui.js"></script>
+  <script type="module" src="js/form.js"></script>
 </body>
 </html>
