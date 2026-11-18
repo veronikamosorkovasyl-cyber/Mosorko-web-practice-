@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cinema-Ua — афіша кіно та квитки онлайн з вибором місця</title>
+  <meta name="description" content="Афіша фільмів, сеанси та купівля квитків онлайн у Cinema-Ua. Обирайте місце в залі на інтерактивній схемі.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="uk_UA">
+  <meta property="og:site_name" content="Cinema-Ua">
+  <meta property="og:title" content="Cinema-Ua — афіша кіно та квитки онлайн з вибором місця">
+  <meta property="og:description" content="Афіша фільмів, сеанси та купівля квитків онлайн у Cinema-Ua. Обирайте місце в залі на інтерактивній схемі.">
+  <meta property="og:image" content="assets/og-cover.webp">
+  <meta property="og:url" content="https://cinema-ua.example/index.html">
+  <link rel="icon" href="assets/Logo_Cinema.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти до основного вмісту</a>
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <img src="assets/Logo_Cinema.svg" alt="" width="40" height="40">
+      <span>Cinema-Ua</span>
+    </a>
+    <nav aria-label="Головна навігація">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">Меню</button>
+      <ul id="nav-list">
+          <li><a href="index.html" aria-current="page">Головна</a></li>
+          <li><a href="catalog.html">Афіші</a></li>
+          <li><a href="contacts.html">Контакти</a></li>
+      </ul>
+    </nav>
+    <form class="site-search" role="search" action="catalog.html" method="get">
+      <label class="visually-hidden" for="q">Пошук фільмів</label>
+      <input id="q" name="q" type="search" placeholder="Пошук" autocomplete="off">
+      <button type="submit">Знайти</button>
+    </form>
+    <a class="lang" href="#" hreflang="en" lang="en" title="Switch to English">EN</a>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="page-title">
+      <h1 id="page-title">Cinema-Ua: квитки в кіно онлайн</h1>
+      <p>Обери фільм, сеанс і місце в залі на зручній схемі.</p>
+      <form class="filters" action="catalog.html" method="get" aria-label="Фільтри афіші">
+        <div>
+          <label for="cinema">Виберіть кінотеатр</label>
+          <select id="cinema" name="cinema">
+            <option value="">Усі кінотеатри</option>
+            <option value="a">Локація А</option>
+            <option value="b">Локація Б</option>
+            <option value="c">Локація В</option>
+          </select>
+        </div>
+        <div>
+          <label for="genre">Жанр</label>
+          <select id="genre" name="genre">
+            <option value="">Усі жанри</option>
+            <option>Бойовик</option><option>Комедія</option><option>Драма</option>
+            <option>Мультфільм</option><option>Трилер</option><option>Фантастика</option>
+          </select>
+        </div>
+        <div>
+          <label for="date">Дата</label>
+          <input id="date" name="date" type="date" min="2026-11-18">
+        </div>
+        <button class="btn" type="submit">Показати</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="now-playing">
+      <h2 id="now-playing">Вже в кіно</h2>
+      <ul class="film-grid">
+            <li>
+              <article class="film-card">
+                <figure>
+                  <picture>
+                    <source type="image/webp" srcset="assets/posters/film-1-400.webp 400w, assets/posters/film-1-800.webp 800w" sizes="(min-width: 1280px) 20vw, (min-width: 768px) 33vw, 50vw">
+                    <img src="assets/posters/film-1-400.jpg" alt="Постер фільму «Назва фільму 1»" width="400" height="600" loading="lazy" decoding="async">
+                  </picture>
+                  <figcaption class="visually-hidden">Постер: Назва фільму 1</figcaption>
+                </figure>
+                <h3>Назва фільму 1</h3>
+                <p class="film-card__genre">Бойовик</p>
+                <a class="btn" href="session.html?film=1" aria-label="Купити квиток на фільм «Назва фільму 1»">Купити квиток</a>
+              </article>
+            </li>
+            <li>
+              <article class="film-card">
+                <figure>
+                  <picture>
+                    <source type="image/webp" srcset="assets/posters/film-2-400.webp 400w, assets/posters/film-2-800.webp 800w" sizes="(min-width: 1280px) 20vw, (min-width: 768px) 33vw, 50vw">
+                    <img src="assets/posters/film-2-400.jpg" alt="Постер фільму «Назва фільму 2»" width="400" height="600" loading="lazy" decoding="async">
+                  </picture>
+                  <figcaption class="visually-hidden">Постер: Назва фільму 2</figcaption>
+                </figure>
+                <h3>Назва фільму 2</h3>
+                <p class="film-card__genre">Комедія</p>
+                <a class="btn" href="session.html?film=2" aria-label="Купити квиток на фільм «Назва фільму 2»">Купити квиток</a>
+              </article>
+            </li>
+            <li>
+              <article class="film-card">
+                <figure>
+                  <picture>
+                    <source type="image/webp" srcset="assets/posters/film-3-400.webp 400w, assets/posters/film-3-800.webp 800w" sizes="(min-width: 1280px) 20vw, (min-width: 768px) 33vw, 50vw">
+                    <img src="assets/posters/film-3-400.jpg" alt="Постер фільму «Назва фільму 3»" width="400" height="600" loading="lazy" decoding="async">
+                  </picture>
+                  <figcaption class="visually-hidden">Постер: Назва фільму 3</figcaption>
+                </figure>
+                <h3>Назва фільму 3</h3>
+                <p class="film-card__genre">Драма</p>
+                <a class="btn" href="session.html?film=3" aria-label="Купити квиток на фільм «Назва фільму 3»">Купити квиток</a>
+              </article>
+            </li>
+            <li>
+              <article class="film-card">
+                <figure>
+                  <picture>
+                    <source type="image/webp" srcset="assets/posters/film-4-400.webp 400w, assets/posters/film-4-800.webp 800w" sizes="(min-width: 1280px) 20vw, (min-width: 768px) 33vw, 50vw">
+                    <img src="assets/posters/film-4-400.jpg" alt="Постер фільму «Назва фільму 4»" width="400" height="600" loading="lazy" decoding="async">
+                  </picture>
+                  <figcaption class="visually-hidden">Постер: Назва фільму 4</figcaption>
+                </figure>
+                <h3>Назва фільму 4</h3>
+                <p class="film-card__genre">Мультфільм</p>
+                <a class="btn" href="session.html?film=4" aria-label="Купити квиток на фільм «Назва фільму 4»">Купити квиток</a>
+              </article>
+            </li>
+            <li>
+              <article class="film-card">
+                <figure>
+                  <picture>
+                    <source type="image/webp" srcset="assets/posters/film-5-400.webp 400w, assets/posters/film-5-800.webp 800w" sizes="(min-width: 1280px) 20vw, (min-width: 768px) 33vw, 50vw">
+                    <img src="assets/posters/film-5-400.jpg" alt="Постер фільму «Назва фільму 5»" width="400" height="600" loading="lazy" decoding="async">
+                  </picture>
+                  <figcaption class="visually-hidden">Постер: Назва фільму 5</figcaption>
+                </figure>
+                <h3>Назва фільму 5</h3>
+                <p class="film-card__genre">Трилер</p>
+                <a class="btn" href="session.html?film=5" aria-label="Купити квиток на фільм «Назва фільму 5»">Купити квиток</a>
+              </article>
+            </li>
+      </ul>
+      <p><a class="btn btn--secondary" href="catalog.html">Всі фільми</a></p>
+    </section>
+
+    <section aria-labelledby="faq-title">
+      <h2 id="faq-title">Маєш запитання?</h2>
+      <p>Ми вже підготували відповіді на найпопулярніші з них. Зазирни сюди, щоб не чекати на оператора.</p>
+      <div class="info-grid">
+        <article>
+          <h3>Чат підтримка з ШІ</h3>
+          <p>Швидкі відповіді на загальні питання про роботу кінотеатру, повітряні тривоги, бонуси, знижки тощо. Якщо відповіді не знайдеться, до чату підключиться оператор контакт-центру.</p>
+          <a class="btn" href="contacts.html#ai-chat">Запитай</a>
+        </article>
+        <article>
+          <h3>Повернення квитків</h3>
+          <p>Якщо сеанс скасовано через повітряну тривогу чи інший форс-мажор, не хвилюйся. Ми повернемо кошти, обміняємо квиток, нарахуємо бонуси або надамо промокод. Для цього заповни, будь ласка, форму.</p>
+          <a class="btn" href="contacts.html#return">Заповни форму</a>
+        </article>
+        <article>
+          <h3>Напиши нам</h3>
+          <p>Графік роботи:</p>
+          <ul>
+            <li>Понеділок–Четвер: <time datetime="09:00">9:00</time>–<time datetime="21:00">21:00</time></li>
+            <li>П'ятниця–Неділя: <time datetime="09:00">9:00</time>–<time datetime="22:00">22:00</time></li>
+          </ul>
+          <a class="btn" href="contacts.html#message">Написати</a>
+        </article>
+        <article>
+          <h3>Потелефонуй нам</h3>
+          <p>Графік роботи контакт-центру:</p>
+          <ul>
+            <li>Понеділок–Четвер: <time datetime="09:00">9:00</time>–<time datetime="21:00">21:00</time></li>
+            <li>П'ятниця–Неділя: <time datetime="09:00">9:00</time>–<time datetime="22:00">22:00</time></li>
+          </ul>
+          <a class="btn" href="tel:+380000000000">Зателефонувати</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <aside class="partners" aria-labelledby="partners-title">
+    <h2 id="partners-title">Кінотеатри, з якими ми працюємо</h2>
+    <ul class="location-list">
+      <li><address><strong>Локація А</strong><br>вул. Приклад, 1, Івано-Франківськ</address></li>
+      <li><address><strong>Локація Б</strong><br>вул. Приклад, 2, Івано-Франківськ</address></li>
+      <li><address><strong>Локація В</strong><br>вул. Приклад, 3, Івано-Франківськ</address></li>
+    </ul>
+  </aside>
+
+  <footer class="site-footer">
+    <a class="logo" href="index.html">
+      <img src="assets/Logo_Cinema.svg" alt="" width="32" height="32">
+      <span>Cinema-Ua</span>
+    </a>
+    <nav aria-labelledby="footer-info">
+      <h2 id="footer-info">Корисна інформація</h2>
+      <ul>
+        <li><a href="catalog.html">Афіші</a></li>
+        <li><a href="contacts.html#return">Повернення квитків</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+      </ul>
+    </nav>
+    <section aria-labelledby="footer-social">
+      <h2 id="footer-social">Наші соц мережі:</h2>
+      <ul>
+        <li><a href="https://instagram.com/" rel="noopener" target="_blank">Instagram</a></li>
+        <li><a href="https://facebook.com/" rel="noopener" target="_blank">Facebook</a></li>
+        <li><a href="https://t.me/" rel="noopener" target="_blank">Telegram</a></li>
+      </ul>
+    </section>
+    <p><small>Cinema-Ua © <time datetime="2026">2026</time>. Навчальний проєкт, сайт не справжній.</small></p>
+  </footer>
+  <script type="module" src="js/ui.js"></script>
+</body>
+</html>

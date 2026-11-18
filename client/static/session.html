@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вибір місця в залі — Cinema-Ua</title>
+  <meta name="description" content="Оберіть місця на схемі залу: вільні, зайняті та VIP. Вартість звичайного місця 220 грн, VIP — 550 грн.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="uk_UA">
+  <meta property="og:site_name" content="Cinema-Ua">
+  <meta property="og:title" content="Вибір місця в залі — Cinema-Ua">
+  <meta property="og:description" content="Оберіть місця на схемі залу: вільні, зайняті та VIP. Вартість звичайного місця 220 грн, VIP — 550 грн.">
+  <meta property="og:image" content="assets/og-cover.webp">
+  <meta property="og:url" content="https://cinema-ua.example/session.html">
+  <link rel="icon" href="assets/Logo_Cinema.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти до основного вмісту</a>
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <img src="assets/Logo_Cinema.svg" alt="" width="40" height="40">
+      <span>Cinema-Ua</span>
+    </a>
+    <nav aria-label="Головна навігація">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">Меню</button>
+      <ul id="nav-list">
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="catalog.html">Афіші</a></li>
+          <li><a href="contacts.html">Контакти</a></li>
+      </ul>
+    </nav>
+    <form class="site-search" role="search" action="catalog.html" method="get">
+      <label class="visually-hidden" for="q">Пошук фільмів</label>
+      <input id="q" name="q" type="search" placeholder="Пошук" autocomplete="off">
+      <button type="submit">Знайти</button>
+    </form>
+    <a class="lang" href="#" hreflang="en" lang="en" title="Switch to English">EN</a>
+  </header>
+
+  <main id="main">
+    <h1>Вибір місця в залі</h1>
+    <p class="session-info">
+      <strong>Назва фільму 1</strong>,
+      <time datetime="2026-11-20">20 листопада 2026</time>,
+      <time datetime="18:30">18:30</time>–<time datetime="20:35">20:35</time>,
+      Локація В, Бойовик
+    </p>
+
+    <form id="seat-form" class="seat-picker" action="checkout.html" method="post">
+      <section aria-labelledby="hall-title">
+        <h2 id="hall-title">Схема залу</h2>
+        <figure class="hall">
+          <div class="screen" aria-hidden="true">Екран</div>
+        <fieldset class="hall-row">
+          <legend>Ряд 1</legend>
+          <input id="r1s1" type="checkbox" name="seat" value="1-1" data-price="220">
+          <label for="r1s1" class="seat"><span aria-hidden="true">1</span><span class="visually-hidden">Ряд 1, місце 1, 220 грн</span></label>
+          <input id="r1s2" type="checkbox" name="seat" value="1-2" data-price="220">
+          <label for="r1s2" class="seat"><span aria-hidden="true">2</span><span class="visually-hidden">Ряд 1, місце 2, 220 грн</span></label>
+          <input id="r1s3" type="checkbox" name="seat" value="1-3" data-price="220" disabled>
+          <label for="r1s3" class="seat"><span aria-hidden="true">3</span><span class="visually-hidden">Ряд 1, місце 3, 220 грн, зайняте</span></label>
+          <input id="r1s4" type="checkbox" name="seat" value="1-4" data-price="220" disabled>
+          <label for="r1s4" class="seat"><span aria-hidden="true">4</span><span class="visually-hidden">Ряд 1, місце 4, 220 грн, зайняте</span></label>
+          <input id="r1s5" type="checkbox" name="seat" value="1-5" data-price="220">
+          <label for="r1s5" class="seat"><span aria-hidden="true">5</span><span class="visually-hidden">Ряд 1, місце 5, 220 грн</span></label>
+          <input id="r1s6" type="checkbox" name="seat" value="1-6" data-price="220">
+          <label for="r1s6" class="seat"><span aria-hidden="true">6</span><span class="visually-hidden">Ряд 1, місце 6, 220 грн</span></label>
+          <input id="r1s7" type="checkbox" name="seat" value="1-7" data-price="220">
+          <label for="r1s7" class="seat"><span aria-hidden="true">7</span><span class="visually-hidden">Ряд 1, місце 7, 220 грн</span></label>
+          <input id="r1s8" type="checkbox" name="seat" value="1-8" data-price="220">
+          <label for="r1s8" class="seat"><span aria-hidden="true">8</span><span class="visually-hidden">Ряд 1, місце 8, 220 грн</span></label>
+          <input id="r1s9" type="checkbox" name="seat" value="1-9" data-price="220">
+          <label for="r1s9" class="seat"><span aria-hidden="true">9</span><span class="visually-hidden">Ряд 1, місце 9, 220 грн</span></label>
+          <input id="r1s10" type="checkbox" name="seat" value="1-10" data-price="220">
+          <label for="r1s10" class="seat"><span aria-hidden="true">10</span><span class="visually-hidden">Ряд 1, місце 10, 220 грн</span></label>
+          <input id="r1s11" type="checkbox" name="seat" value="1-11" data-price="220">
+          <label for="r1s11" class="seat"><span aria-hidden="true">11</span><span class="visually-hidden">Ряд 1, місце 11, 220 грн</span></label>
+        </fieldset>
+        <fieldset class="hall-row">
+          <legend>Ряд 2</legend>
+          <input id="r2s1" type="checkbox" name="seat" value="2-1" data-price="220">
+          <label for="r2s1" class="seat"><span aria-hidden="true">1</span><span class="visually-hidden">Ряд 2, місце 1, 220 грн</span></label>
+          <input id="r2s2" type="checkbox" name="seat" value="2-2" data-price="220">
+          <label for="r2s2" class="seat"><span aria-hidden="true">2</span><span class="visually-hidden">Ряд 2, місце 2, 220 грн</span></label>
+          <input id="r2s3" type="checkbox" name="seat" value="2-3" data-price="220">
+          <label for="r2s3" class="seat"><span aria-hidden="true">3</span><span class="visually-hidden">Ряд 2, місце 3, 220 грн</span></label>
+          <input id="r2s4" type="checkbox" name="seat" value="2-4" data-price="220">
+          <label for="r2s4" class="seat"><span aria-hidden="true">4</span><span class="visually-hidden">Ряд 2, місце 4, 220 грн</span></label>
+          <input id="r2s5" type="checkbox" name="seat" value="2-5" data-price="220">
+          <label for="r2s5" class="seat"><span aria-hidden="true">5</span><span class="visually-hidden">Ряд 2, місце 5, 220 грн</span></label>
+          <input id="r2s6" type="checkbox" name="seat" value="2-6" data-price="220" disabled>
+          <label for="r2s6" class="seat"><span aria-hidden="true">6</span><span class="visually-hidden">Ряд 2, місце 6, 220 грн, зайняте</span></label>
+          <input id="r2s7" type="checkbox" name="seat" value="2-7" data-price="220">
+          <label for="r2s7" class="seat"><span aria-hidden="true">7</span><span class="visually-hidden">Ряд 2, місце 7, 220 грн</span></label>
+          <input id="r2s8" type="checkbox" name="seat" value="2-8" data-price="220">
+          <label for="r2s8" class="seat"><span aria-hidden="true">8</span><span class="visually-hidden">Ряд 2, місце 8, 220 грн</span></label>
+          <input id="r2s9" type="checkbox" name="seat" value="2-9" data-price="220">
+          <label for="r2s9" class="seat"><span aria-hidden="true">9</span><span class="visually-hidden">Ряд 2, місце 9, 220 грн</span></label>
+          <input id="r2s10" type="checkbox" name="seat" value="2-10" data-price="220">
+          <label for="r2s10" class="seat"><span aria-hidden="true">10</span><span class="visually-hidden">Ряд 2, місце 10, 220 грн</span></label>
+          <input id="r2s11" type="checkbox" name="seat" value="2-11" data-price="220">
+          <label for="r2s11" class="seat"><span aria-hidden="true">11</span><span class="visually-hidden">Ряд 2, місце 11, 220 грн</span></label>
+        </fieldset>
+        <fieldset class="hall-row">
+          <legend>Ряд 3</legend>
+          <input id="r3s1" type="checkbox" name="seat" value="3-1" data-price="220">
+          <label for="r3s1" class="seat"><span aria-hidden="true">1</span><span class="visually-hidden">Ряд 3, місце 1, 220 грн</span></label>
+          <input id="r3s2" type="checkbox" name="seat" value="3-2" data-price="220" disabled>
+          <label for="r3s2" class="seat"><span aria-hidden="true">2</span><span class="visually-hidden">Ряд 3, місце 2, 220 грн, зайняте</span></label>
+          <input id="r3s3" type="checkbox" name="seat" value="3-3" data-price="220">
+          <label for="r3s3" class="seat"><span aria-hidden="true">3</span><span class="visually-hidden">Ряд 3, місце 3, 220 грн</span></label>
+          <input id="r3s4" type="checkbox" name="seat" value="3-4" data-price="220">
+          <label for="r3s4" class="seat"><span aria-hidden="true">4</span><span class="visually-hidden">Ряд 3, місце 4, 220 грн</span></label>
+          <input id="r3s5" type="checkbox" name="seat" value="3-5" data-price="220">
+          <label for="r3s5" class="seat"><span aria-hidden="true">5</span><span class="visually-hidden">Ряд 3, місце 5, 220 грн</span></label>
+          <input id="r3s6" type="checkbox" name="seat" value="3-6" data-price="220">
+          <label for="r3s6" class="seat"><span aria-hidden="true">6</span><span class="visually-hidden">Ряд 3, місце 6, 220 грн</span></label>
+          <input id="r3s7" type="checkbox" name="seat" value="3-7" data-price="220">
+          <label for="r3s7" class="seat"><span aria-hidden="true">7</span><span class="visually-hidden">Ряд 3, місце 7, 220 грн</span></label>
+          <input id="r3s8" type="checkbox" name="seat" value="3-8" data-price="220">
+          <label for="r3s8" class="seat"><span aria-hidden="true">8</span><span class="visually-hidden">Ряд 3, місце 8, 220 грн</span></label>
+          <input id="r3s9" type="checkbox" name="seat" value="3-9" data-price="220" disabled>
+          <label for="r3s9" class="seat"><span aria-hidden="true">9</span><span class="visually-hidden">Ряд 3, місце 9, 220 грн, зайняте</span></label>
+          <input id="r3s10" type="checkbox" name="seat" value="3-10" data-price="220">
+          <label for="r3s10" class="seat"><span aria-hidden="true">10</span><span class="visually-hidden">Ряд 3, місце 10, 220 грн</span></label>
+          <input id="r3s11" type="checkbox" name="seat" value="3-11" data-price="220">
+          <label for="r3s11" class="seat"><span aria-hidden="true">11</span><span class="visually-hidden">Ряд 3, місце 11, 220 грн</span></label>
+        </fieldset>
+        <fieldset class="hall-row">
+          <legend>Ряд 4</legend>
+          <input id="r4s1" type="checkbox" name="seat" value="4-1" data-price="220">
+          <label for="r4s1" class="seat"><span aria-hidden="true">1</span><span class="visually-hidden">Ряд 4, місце 1, 220 грн</span></label>
+          <input id="r4s2" type="checkbox" name="seat" value="4-2" data-price="220">
+          <label for="r4s2" class="seat"><span aria-hidden="true">2</span><span class="visually-hidden">Ряд 4, місце 2, 220 грн</span></label>
+          <input id="r4s3" type="checkbox" name="seat" value="4-3" data-price="220">
+          <label for="r4s3" class="seat"><span aria-hidden="true">3</span><span class="visually-hidden">Ряд 4, місце 3, 220 грн</span></label>
+          <input id="r4s4" type="checkbox" name="seat" value="4-4" data-price="220">
+          <label for="r4s4" class="seat"><span aria-hidden="true">4</span><span class="visually-hidden">Ряд 4, місце 4, 220 грн</span></label>
+          <input id="r4s5" type="checkbox" name="seat" value="4-5" data-price="220" disabled>
+          <label for="r4s5" class="seat"><span aria-hidden="true">5</span><span class="visually-hidden">Ряд 4, місце 5, 220 грн, зайняте</span></label>
+          <input id="r4s6" type="checkbox" name="seat" value="4-6" data-price="220" disabled>
+          <label for="r4s6" class="seat"><span aria-hidden="true">6</span><span class="visually-hidden">Ряд 4, місце 6, 220 грн, зайняте</span></label>
+          <input id="r4s7" type="checkbox" name="seat" value="4-7" data-price="220" disabled>
+          <label for="r4s7" class="seat"><span aria-hidden="true">7</span><span class="visually-hidden">Ряд 4, місце 7, 220 грн, зайняте</span></label>
+          <input id="r4s8" type="checkbox" name="seat" value="4-8" data-price="220">
+          <label for="r4s8" class="seat"><span aria-hidden="true">8</span><span class="visually-hidden">Ряд 4, місце 8, 220 грн</span></label>
+          <input id="r4s9" type="checkbox" name="seat" value="4-9" data-price="220">
+          <label for="r4s9" class="seat"><span aria-hidden="true">9</span><span class="visually-hidden">Ряд 4, місце 9, 220 грн</span></label>
+          <input id="r4s10" type="checkbox" name="seat" value="4-10" data-price="220">
+          <label for="r4s10" class="seat"><span aria-hidden="true">10</span><span class="visually-hidden">Ряд 4, місце 10, 220 грн</span></label>
+          <input id="r4s11" type="checkbox" name="seat" value="4-11" data-price="220">
+          <label for="r4s11" class="seat"><span aria-hidden="true">11</span><span class="visually-hidden">Ряд 4, місце 11, 220 грн</span></label>
+        </fieldset>
+        <fieldset class="hall-row">
+          <legend>Ряд 5</legend>
+          <input id="r5s1" type="checkbox" name="seat" value="5-1" data-price="220" disabled>
+          <label for="r5s1" class="seat"><span aria-hidden="true">1</span><span class="visually-hidden">Ряд 5, місце 1, 220 грн, зайняте</span></label>
+          <input id="r5s2" type="checkbox" name="seat" value="5-2" data-price="220">
+          <label for="r5s2" class="seat"><span aria-hidden="true">2</span><span class="visually-hidden">Ряд 5, місце 2, 220 грн</span></label>
+          <input id="r5s3" type="checkbox" name="seat" value="5-3" data-price="220">
+          <label for="r5s3" class="seat"><span aria-hidden="true">3</span><span class="visually-hidden">Ряд 5, місце 3, 220 грн</span></label>
+          <input id="r5s4" type="checkbox" name="seat" value="5-4" data-price="220">
+          <label for="r5s4" class="seat"><span aria-hidden="true">4</span><span class="visually-hidden">Ряд 5, місце 4, 220 грн</span></label>
+          <input id="r5s5" type="checkbox" name="seat" value="5-5" data-price="220">
+          <label for="r5s5" class="seat"><span aria-hidden="true">5</span><span class="visually-hidden">Ряд 5, місце 5, 220 грн</span></label>
+          <input id="r5s6" type="checkbox" name="seat" value="5-6" data-price="220">
+          <label for="r5s6" class="seat"><span aria-hidden="true">6</span><span class="visually-hidden">Ряд 5, місце 6, 220 грн</span></label>
+          <input id="r5s7" type="checkbox" name="seat" value="5-7" data-price="220">
+          <label for="r5s7" class="seat"><span aria-hidden="true">7</span><span class="visually-hidden">Ряд 5, місце 7, 220 грн</span></label>
+          <input id="r5s8" type="checkbox" name="seat" value="5-8" data-price="220">
+          <label for="r5s8" class="seat"><span aria-hidden="true">8</span><span class="visually-hidden">Ряд 5, місце 8, 220 грн</span></label>
+          <input id="r5s9" type="checkbox" name="seat" value="5-9" data-price="220">
+          <label for="r5s9" class="seat"><span aria-hidden="true">9</span><span class="visually-hidden">Ряд 5, місце 9, 220 грн</span></label>
+          <input id="r5s10" type="checkbox" name="seat" value="5-10" data-price="220">
+          <label for="r5s10" class="seat"><span aria-hidden="true">10</span><span class="visually-hidden">Ряд 5, місце 10, 220 грн</span></label>
+          <input id="r5s11" type="checkbox" name="seat" value="5-11" data-price="220">
+          <label for="r5s11" class="seat"><span aria-hidden="true">11</span><span class="visually-hidden">Ряд 5, місце 11, 220 грн</span></label>
+        </fieldset>
+        <fieldset class="hall-row">
+          <legend>Ряд 6</legend>
+          <input id="r6s1" type="checkbox" name="seat" value="6-1" data-price="220">
+          <label for="r6s1" class="seat"><span aria-hidden="true">1</span><span class="visually-hidden">Ряд 6, місце 1, 220 грн</span></label>
+          <input id="r6s2" type="checkbox" name="seat" value="6-2" data-price="220">
+          <label for="r6s2" class="seat"><span aria-hidden="true">2</span><span class="visually-hidden">Ряд 6, місце 2, 220 грн</span></label>
+          <input id="r6s3" type="checkbox" name="seat" value="6-3" data-price="220">
+          <label for="r6s3" class="seat"><span aria-hidden="true">3</span><span class="visually-hidden">Ряд 6, місце 3, 220 грн</span></label>
+          <input id="r6s4" type="checkbox" name="seat" value="6-4" data-price="220">
+          <label for="r6s4" class="seat"><span aria-hidden="true">4</span><span class="visually-hidden">Ряд 6, місце 4, 220 грн</span></label>
+          <input id="r6s5" type="checkbox" name="seat" value="6-5" data-price="220">
+          <label for="r6s5" class="seat"><span aria-hidden="true">5</span><span class="visually-hidden">Ряд 6, місце 5, 220 грн</span></label>
+          <input id="r6s6" type="checkbox" name="seat" value="6-6" data-price="220">
+          <label for="r6s6" class="seat"><span aria-hidden="true">6</span><span class="visually-hidden">Ряд 6, місце 6, 220 грн</span></label>
+          <input id="r6s7" type="checkbox" name="seat" value="6-7" data-price="220">
+          <label for="r6s7" class="seat"><span aria-hidden="true">7</span><span class="visually-hidden">Ряд 6, місце 7, 220 грн</span></label>
+          <input id="r6s8" type="checkbox" name="seat" value="6-8" data-price="220">
+          <label for="r6s8" class="seat"><span aria-hidden="true">8</span><span class="visually-hidden">Ряд 6, місце 8, 220 грн</span></label>
+          <input id="r6s9" type="checkbox" name="seat" value="6-9" data-price="220">
+          <label for="r6s9" class="seat"><span aria-hidden="true">9</span><span class="visually-hidden">Ряд 6, місце 9, 220 грн</span></label>
+          <input id="r6s10" type="checkbox" name="seat" value="6-10" data-price="220" disabled>
+          <label for="r6s10" class="seat"><span aria-hidden="true">10</span><span class="visually-hidden">Ряд 6, місце 10, 220 грн, зайняте</span></label>
+          <input id="r6s11" type="checkbox" name="seat" value="6-11" data-price="220" disabled>
+          <label for="r6s11" class="seat"><span aria-hidden="true">11</span><span class="visually-hidden">Ряд 6, місце 11, 220 грн, зайняте</span></label>
+        </fieldset>
+        <fieldset class="hall-row hall-row--vip">
+          <legend>Ряд 7 (VIP)</legend>
+          <input id="r7s1" type="checkbox" name="seat" value="7-1" data-price="550">
+          <label for="r7s1" class="seat seat--vip"><span aria-hidden="true">1</span><span class="visually-hidden">Ряд 7, місце 1, 550 грн</span></label>
+          <input id="r7s2" type="checkbox" name="seat" value="7-2" data-price="550">
+          <label for="r7s2" class="seat seat--vip"><span aria-hidden="true">2</span><span class="visually-hidden">Ряд 7, місце 2, 550 грн</span></label>
+          <input id="r7s3" type="checkbox" name="seat" value="7-3" data-price="550">
+          <label for="r7s3" class="seat seat--vip"><span aria-hidden="true">3</span><span class="visually-hidden">Ряд 7, місце 3, 550 грн</span></label>
+          <input id="r7s4" type="checkbox" name="seat" value="7-4" data-price="550" disabled>
+          <label for="r7s4" class="seat seat--vip"><span aria-hidden="true">4</span><span class="visually-hidden">Ряд 7, місце 4, 550 грн, зайняте</span></label>
+          <input id="r7s5" type="checkbox" name="seat" value="7-5" data-price="550">
+          <label for="r7s5" class="seat seat--vip"><span aria-hidden="true">5</span><span class="visually-hidden">Ряд 7, місце 5, 550 грн</span></label>
+          <input id="r7s6" type="checkbox" name="seat" value="7-6" data-price="550">
+          <label for="r7s6" class="seat seat--vip"><span aria-hidden="true">6</span><span class="visually-hidden">Ряд 7, місце 6, 550 грн</span></label>
+          <input id="r7s7" type="checkbox" name="seat" value="7-7" data-price="550">
+          <label for="r7s7" class="seat seat--vip"><span aria-hidden="true">7</span><span class="visually-hidden">Ряд 7, місце 7, 550 грн</span></label>
+          <input id="r7s8" type="checkbox" name="seat" value="7-8" data-price="550" disabled>
+          <label for="r7s8" class="seat seat--vip"><span aria-hidden="true">8</span><span class="visually-hidden">Ряд 7, місце 8, 550 грн, зайняте</span></label>
+          <input id="r7s9" type="checkbox" name="seat" value="7-9" data-price="550">
+          <label for="r7s9" class="seat seat--vip"><span aria-hidden="true">9</span><span class="visually-hidden">Ряд 7, місце 9, 550 грн</span></label>
+          <input id="r7s10" type="checkbox" name="seat" value="7-10" data-price="550">
+          <label for="r7s10" class="seat seat--vip"><span aria-hidden="true">10</span><span class="visually-hidden">Ряд 7, місце 10, 550 грн</span></label>
+          <input id="r7s11" type="checkbox" name="seat" value="7-11" data-price="550">
+          <label for="r7s11" class="seat seat--vip"><span aria-hidden="true">11</span><span class="visually-hidden">Ряд 7, місце 11, 550 грн</span></label>
+        </fieldset>
+          <figcaption>Схема залу: ряди 1–6 — звичайні місця, ряд 7 — VIP. Позначки в рядках — номери місць.</figcaption>
+        </figure>
+
+        <h3>Умовні позначення</h3>
+        <ul class="legend">
+          <li><span class="swatch swatch--free" aria-hidden="true"></span> Вільне</li>
+          <li><span class="swatch swatch--selected" aria-hidden="true"></span> Обране</li>
+          <li><span class="swatch swatch--taken" aria-hidden="true"></span> Зайняте</li>
+          <li><span class="swatch swatch--vip" aria-hidden="true"></span> VIP — 550 грн</li>
+          <li><span class="swatch swatch--free" aria-hidden="true"></span> Одне місце — 220 грн</li>
+        </ul>
+      </section>
+
+      <aside class="summary" aria-labelledby="summary-title">
+        <h2 id="summary-title">Ваше замовлення</h2>
+        <p class="summary__place">Локація В, вул. Приклад, 3</p>
+        <ul id="selected-list" aria-live="polite">
+          <li class="summary__empty">Обрані місця будуть тут</li>
+        </ul>
+        <p>Всього: <output id="ticket-count">0</output> квитків</p>
+        <p class="summary__total">Сума: <output id="ticket-total">0</output> грн</p>
+        <button class="btn" type="submit" disabled>Продовжити</button>
+      </aside>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <a class="logo" href="index.html">
+      <img src="assets/Logo_Cinema.svg" alt="" width="32" height="32">
+      <span>Cinema-Ua</span>
+    </a>
+    <nav aria-labelledby="footer-info">
+      <h2 id="footer-info">Корисна інформація</h2>
+      <ul>
+        <li><a href="catalog.html">Афіші</a></li>
+        <li><a href="contacts.html#return">Повернення квитків</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+      </ul>
+    </nav>
+    <section aria-labelledby="footer-social">
+      <h2 id="footer-social">Наші соц мережі:</h2>
+      <ul>
+        <li><a href="https://instagram.com/" rel="noopener" target="_blank">Instagram</a></li>
+        <li><a href="https://facebook.com/" rel="noopener" target="_blank">Facebook</a></li>
+        <li><a href="https://t.me/" rel="noopener" target="_blank">Telegram</a></li>
+      </ul>
+    </section>
+    <p><small>Cinema-Ua © <time datetime="2026">2026</time>. Навчальний проєкт, сайт не справжній.</small></p>
+  </footer>
+  <script type="module" src="js/ui.js"></script>
+</body>
+</html>

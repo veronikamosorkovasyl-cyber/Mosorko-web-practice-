@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Контакти та повернення квитків — Cinema-Ua</title>
+  <meta name="description" content="Зв'яжіться з Cinema-Ua: форма звернення, повернення квитків, графік роботи контакт-центру та карта.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="uk_UA">
+  <meta property="og:site_name" content="Cinema-Ua">
+  <meta property="og:title" content="Контакти та повернення квитків — Cinema-Ua">
+  <meta property="og:description" content="Зв'яжіться з Cinema-Ua: форма звернення, повернення квитків, графік роботи контакт-центру та карта.">
+  <meta property="og:image" content="assets/og-cover.webp">
+  <meta property="og:url" content="https://cinema-ua.example/contacts.html">
+  <link rel="icon" href="assets/Logo_Cinema.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти до основного вмісту</a>
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <img src="assets/Logo_Cinema.svg" alt="" width="40" height="40">
+      <span>Cinema-Ua</span>
+    </a>
+    <nav aria-label="Головна навігація">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">Меню</button>
+      <ul id="nav-list">
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="catalog.html">Афіші</a></li>
+          <li><a href="contacts.html" aria-current="page">Контакти</a></li>
+      </ul>
+    </nav>
+    <form class="site-search" role="search" action="catalog.html" method="get">
+      <label class="visually-hidden" for="q">Пошук фільмів</label>
+      <input id="q" name="q" type="search" placeholder="Пошук" autocomplete="off">
+      <button type="submit">Знайти</button>
+    </form>
+    <a class="lang" href="#" hreflang="en" lang="en" title="Switch to English">EN</a>
+  </header>
+
+  <main id="main">
+    <h1>Контакти</h1>
+
+    <section aria-labelledby="hours-title">
+      <h2 id="hours-title">Графік роботи контакт-центру</h2>
+      <ul>
+        <li>Понеділок–Четвер: <time datetime="09:00">9:00</time>–<time datetime="21:00">21:00</time></li>
+        <li>П'ятниця–Неділя: <time datetime="09:00">9:00</time>–<time datetime="22:00">22:00</time></li>
+      </ul>
+      <address>
+        Телефон: <a href="tel:+380000000000">+38 (000) 000-00-00</a><br>
+        Email: <a href="mailto:info@cinema-ua.example">info@cinema-ua.example</a>
+      </address>
+    </section>
+
+    <section id="ai-chat" aria-labelledby="ai-title">
+      <h2 id="ai-title">Чат підтримка з ШІ</h2>
+      <p>Швидкі відповіді на загальні питання про роботу кінотеатру, повітряні тривоги, бонуси та знижки. Якщо відповіді не знайдеться, до чату підключиться оператор.</p>
+    </section>
+
+    <section id="message" aria-labelledby="form-title">
+      <h2 id="form-title">Напиши нам / повернення квитків</h2>
+      <p>Якщо сеанс скасовано через повітряну тривогу чи інший форс-мажор, ми повернемо кошти, обміняємо квиток, нарахуємо бонуси або надамо промокод.</p>
+      <form id="return" action="/api/contact" method="post" novalidate>
+        <fieldset>
+          <legend>Ваші дані</legend>
+          <p>
+            <label for="name">Ім'я <span aria-hidden="true">*</span></label>
+            <input id="name" name="name" type="text" required minlength="2" maxlength="60" autocomplete="name" placeholder="Іван Петренко">
+          </p>
+          <p>
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" required autocomplete="email" placeholder="name@example.com">
+          </p>
+          <p>
+            <label for="phone">Телефон <span aria-hidden="true">*</span></label>
+            <input id="phone" name="phone" type="tel" required pattern="\+380[0-9]{9}" autocomplete="tel" placeholder="+380XXXXXXXXX" aria-describedby="phone-hint">
+            <small id="phone-hint">Формат: +380 і 9 цифр</small>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Звернення</legend>
+          <p>
+            <label for="topic">Тема</label>
+            <select id="topic" name="topic" required>
+              <option value="">— Оберіть тему —</option>
+              <option value="refund">Повернення коштів</option>
+              <option value="exchange">Обмін квитка</option>
+              <option value="bonus">Бонуси / промокод</option>
+              <option value="other">Інше питання</option>
+            </select>
+          </p>
+          <p>
+            <label for="ticket">Номер квитка</label>
+            <input id="ticket" name="ticket" type="text" pattern="[0-9]{6,10}" inputmode="numeric" placeholder="123456">
+          </p>
+          <p>
+            <label for="message-text">Повідомлення <span aria-hidden="true">*</span></label>
+            <textarea id="message-text" name="message" rows="5" required minlength="10" maxlength="1000"></textarea>
+          </p>
+        </fieldset>
+
+        <p>
+          <input id="agree" name="agree" type="checkbox" required>
+          <label for="agree">Погоджуюсь на обробку персональних даних</label>
+        </p>
+        <button class="btn" type="submit">Надіслати</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="map-title">
+      <h2 id="map-title">Як нас знайти</h2>
+      <iframe title="Карта розташування кінотеатру в Івано-Франківську"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=24.69%2C48.90%2C24.75%2C48.94&amp;layer=mapnik"
+        width="600" height="400" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="logo" href="index.html">
+      <img src="assets/Logo_Cinema.svg" alt="" width="32" height="32">
+      <span>Cinema-Ua</span>
+    </a>
+    <nav aria-labelledby="footer-info">
+      <h2 id="footer-info">Корисна інформація</h2>
+      <ul>
+        <li><a href="catalog.html">Афіші</a></li>
+        <li><a href="contacts.html#return">Повернення квитків</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+      </ul>
+    </nav>
+    <section aria-labelledby="footer-social">
+      <h2 id="footer-social">Наші соц мережі:</h2>
+      <ul>
+        <li><a href="https://instagram.com/" rel="noopener" target="_blank">Instagram</a></li>
+        <li><a href="https://facebook.com/" rel="noopener" target="_blank">Facebook</a></li>
+        <li><a href="https://t.me/" rel="noopener" target="_blank">Telegram</a></li>
+      </ul>
+    </section>
+    <p><small>Cinema-Ua © <time datetime="2026">2026</time>. Навчальний проєкт, сайт не справжній.</small></p>
+  </footer>
+  <script type="module" src="js/ui.js"></script>
+</body>
+</html>
