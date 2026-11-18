@@ -52,7 +52,7 @@
     <h1>Афіші</h1>
     <section aria-labelledby="filters-title">
       <h2 id="filters-title" class="visually-hidden">Фільтри</h2>
-      <form class="filters" action="catalog.html" method="get" aria-label="Фільтри афіші">
+      <form class="filters filters--sort" action="catalog.html" method="get" aria-label="Фільтри афіші">
         <div>
           <label for="cinema">Виберіть кінотеатр</label>
           <select id="cinema" name="cinema">
@@ -74,154 +74,24 @@
           <label for="date">Дата</label>
           <input id="date" name="date" type="date" min="2026-11-18">
         </div>
+        <div>
+          <label for="sort">Сортування</label>
+          <select id="sort" name="sort">
+            <option value="default">За замовчуванням</option>
+            <option value="title">За назвою</option>
+            <option value="genre">За жанром</option>
+            <option value="date">За датою сеансу</option>
+          </select>
+        </div>
         <button class="btn" type="submit">Показати</button>
       </form>
     </section>
     <section aria-labelledby="list-title">
       <h2 id="list-title">Всі фільми</h2>
-      <p id="results-count" aria-live="polite">Знайдено фільмів: 10</p>
-      <ul class="film-grid">
-            <li>
-              <article class="film-card">
-                <figure>
-                  <picture>
-                    <source type="image/webp" srcset="assets/posters/film-1-400.webp 400w, assets/posters/film-1-800.webp 800w" sizes="(min-width: 1280px) 20vw, (min-width: 768px) 33vw, 50vw">
-                    <img src="assets/posters/film-1-400.jpg" alt="Постер фільму «Назва фільму 1»" width="400" height="600" loading="lazy" decoding="async">
-                  </picture>
-                  <figcaption class="visually-hidden">Постер: Назва фільму 1</figcaption>
-                </figure>
-                <h3>Назва фільму 1</h3>
-                <p class="film-card__genre">Бойовик</p>
-                <a class="btn" href="session.html?film=1" aria-label="Купити квиток на фільм «Назва фільму 1»">Купити квиток</a>
-              </article>
-            </li>
-            <li>
-              <article class="film-card">
-                <figure>
-                  <picture>
-                    <source type="image/webp" srcset="assets/posters/film-2-400.webp 400w, assets/posters/film-2-800.webp 800w" sizes="(min-width: 1280px) 20vw, (min-width: 768px) 33vw, 50vw">
-                    <img src="assets/posters/film-2-400.jpg" alt="Постер фільму «Назва фільму 2»" width="400" height="600" loading="lazy" decoding="async">
-                  </picture>
-                  <figcaption class="visually-hidden">Постер: Назва фільму 2</figcaption>
-                </figure>
-                <h3>Назва фільму 2</h3>
-                <p class="film-card__genre">Комедія</p>
-                <a class="btn" href="session.html?film=2" aria-label="Купити квиток на фільм «Назва фільму 2»">Купити квиток</a>
-              </article>
-            </li>
-            <li>
-              <article class="film-card">
-                <figure>
-                  <picture>
-                    <source type="image/webp" srcset="assets/posters/film-3-400.webp 400w, assets/posters/film-3-800.webp 800w" sizes="(min-width: 1280px) 20vw, (min-width: 768px) 33vw, 50vw">
-                    <img src="assets/posters/film-3-400.jpg" alt="Постер фільму «Назва фільму 3»" width="400" height="600" loading="lazy" decoding="async">
-                  </picture>
-                  <figcaption class="visually-hidden">Постер: Назва фільму 3</figcaption>
-                </figure>
-                <h3>Назва фільму 3</h3>
-                <p class="film-card__genre">Драма</p>
-                <a class="btn" href="session.html?film=3" aria-label="Купити квиток на фільм «Назва фільму 3»">Купити квиток</a>
-              </article>
-            </li>
-            <li>
-              <article class="film-card">
-                <figure>
-                  <picture>
-                    <source type="image/webp" srcset="assets/posters/film-4-400.webp 400w, assets/posters/film-4-800.webp 800w" sizes="(min-width: 1280px) 20vw, (min-width: 768px) 33vw, 50vw">
-                    <img src="assets/posters/film-4-400.jpg" alt="Постер фільму «Назва фільму 4»" width="400" height="600" loading="lazy" decoding="async">
-                  </picture>
-                  <figcaption class="visually-hidden">Постер: Назва фільму 4</figcaption>
-                </figure>
-                <h3>Назва фільму 4</h3>
-                <p class="film-card__genre">Мультфільм</p>
-                <a class="btn" href="session.html?film=4" aria-label="Купити квиток на фільм «Назва фільму 4»">Купити квиток</a>
-              </article>
-            </li>
-            <li>
-              <article class="film-card">
-                <figure>
-                  <picture>
-                    <source type="image/webp" srcset="assets/posters/film-5-400.webp 400w, assets/posters/film-5-800.webp 800w" sizes="(min-width: 1280px) 20vw, (min-width: 768px) 33vw, 50vw">
-                    <img src="assets/posters/film-5-400.jpg" alt="Постер фільму «Назва фільму 5»" width="400" height="600" loading="lazy" decoding="async">
-                  </picture>
-                  <figcaption class="visually-hidden">Постер: Назва фільму 5</figcaption>
-                </figure>
-                <h3>Назва фільму 5</h3>
-                <p class="film-card__genre">Трилер</p>
-                <a class="btn" href="session.html?film=5" aria-label="Купити квиток на фільм «Назва фільму 5»">Купити квиток</a>
-              </article>
-            </li>
-            <li>
-              <article class="film-card">
-                <figure>
-                  <picture>
-                    <source type="image/webp" srcset="assets/posters/film-6-400.webp 400w, assets/posters/film-6-800.webp 800w" sizes="(min-width: 1280px) 20vw, (min-width: 768px) 33vw, 50vw">
-                    <img src="assets/posters/film-6-400.jpg" alt="Постер фільму «Назва фільму 6»" width="400" height="600" loading="lazy" decoding="async">
-                  </picture>
-                  <figcaption class="visually-hidden">Постер: Назва фільму 6</figcaption>
-                </figure>
-                <h3>Назва фільму 6</h3>
-                <p class="film-card__genre">Фантастика</p>
-                <a class="btn" href="session.html?film=6" aria-label="Купити квиток на фільм «Назва фільму 6»">Купити квиток</a>
-              </article>
-            </li>
-            <li>
-              <article class="film-card">
-                <figure>
-                  <picture>
-                    <source type="image/webp" srcset="assets/posters/film-7-400.webp 400w, assets/posters/film-7-800.webp 800w" sizes="(min-width: 1280px) 20vw, (min-width: 768px) 33vw, 50vw">
-                    <img src="assets/posters/film-7-400.jpg" alt="Постер фільму «Назва фільму 7»" width="400" height="600" loading="lazy" decoding="async">
-                  </picture>
-                  <figcaption class="visually-hidden">Постер: Назва фільму 7</figcaption>
-                </figure>
-                <h3>Назва фільму 7</h3>
-                <p class="film-card__genre">Жахи</p>
-                <a class="btn" href="session.html?film=7" aria-label="Купити квиток на фільм «Назва фільму 7»">Купити квиток</a>
-              </article>
-            </li>
-            <li>
-              <article class="film-card">
-                <figure>
-                  <picture>
-                    <source type="image/webp" srcset="assets/posters/film-8-400.webp 400w, assets/posters/film-8-800.webp 800w" sizes="(min-width: 1280px) 20vw, (min-width: 768px) 33vw, 50vw">
-                    <img src="assets/posters/film-8-400.jpg" alt="Постер фільму «Назва фільму 8»" width="400" height="600" loading="lazy" decoding="async">
-                  </picture>
-                  <figcaption class="visually-hidden">Постер: Назва фільму 8</figcaption>
-                </figure>
-                <h3>Назва фільму 8</h3>
-                <p class="film-card__genre">Мелодрама</p>
-                <a class="btn" href="session.html?film=8" aria-label="Купити квиток на фільм «Назва фільму 8»">Купити квиток</a>
-              </article>
-            </li>
-            <li>
-              <article class="film-card">
-                <figure>
-                  <picture>
-                    <source type="image/webp" srcset="assets/posters/film-9-400.webp 400w, assets/posters/film-9-800.webp 800w" sizes="(min-width: 1280px) 20vw, (min-width: 768px) 33vw, 50vw">
-                    <img src="assets/posters/film-9-400.jpg" alt="Постер фільму «Назва фільму 9»" width="400" height="600" loading="lazy" decoding="async">
-                  </picture>
-                  <figcaption class="visually-hidden">Постер: Назва фільму 9</figcaption>
-                </figure>
-                <h3>Назва фільму 9</h3>
-                <p class="film-card__genre">Пригоди</p>
-                <a class="btn" href="session.html?film=9" aria-label="Купити квиток на фільм «Назва фільму 9»">Купити квиток</a>
-              </article>
-            </li>
-            <li>
-              <article class="film-card">
-                <figure>
-                  <picture>
-                    <source type="image/webp" srcset="assets/posters/film-10-400.webp 400w, assets/posters/film-10-800.webp 800w" sizes="(min-width: 1280px) 20vw, (min-width: 768px) 33vw, 50vw">
-                    <img src="assets/posters/film-10-400.jpg" alt="Постер фільму «Назва фільму 10»" width="400" height="600" loading="lazy" decoding="async">
-                  </picture>
-                  <figcaption class="visually-hidden">Постер: Назва фільму 10</figcaption>
-                </figure>
-                <h3>Назва фільму 10</h3>
-                <p class="film-card__genre">Документальний</p>
-                <a class="btn" href="session.html?film=10" aria-label="Купити квиток на фільм «Назва фільму 10»">Купити квиток</a>
-              </article>
-            </li>
-      </ul>
+      <p id="results-count" aria-live="polite">Завантаження…</p>
+      <div id="film-status" aria-live="polite"></div>
+      <ul class="film-grid" id="film-grid"></ul>
+      <noscript><p>Для перегляду афіші потрібен JavaScript.</p></noscript>
     </section>
   </main>
 
@@ -249,5 +119,6 @@
     <p><small>Cinema-Ua © <time datetime="2026">2026</time>. Навчальний проєкт, сайт не справжній.</small></p>
   </footer>
   <script type="module" src="js/ui.js"></script>
+  <script type="module" src="js/catalog.js"></script>
 </body>
 </html>
