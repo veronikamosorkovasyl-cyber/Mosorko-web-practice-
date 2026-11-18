@@ -1160,3 +1160,141 @@ input:focus-visible+.seat {
         scroll-behavior: auto !important;
     }
 }
+/* 13. ПР 6: стани, помилки форми, модальне вікно ------------------------------ */
+.film-card[data-href] {
+    cursor: pointer;
+}
+
+.state {
+    padding: var(--space-4);
+    background: var(--surface);
+    border: 1px dashed var(--field-border);
+    border-radius: var(--radius-md);
+}
+
+.state p {
+    margin-bottom: var(--space-3);
+}
+
+.state--error {
+    border-color: var(--color-error);
+}
+
+.field-error {
+    display: block;
+    flex-basis: 100%;
+    margin-top: var(--space-1);
+    color: var(--color-error);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.field-error[hidden] {
+    display: none;
+}
+
+[aria-invalid="true"] {
+    border-color: var(--color-error) !important;
+    box-shadow: 0 0 0 1px var(--color-error);
+}
+
+#return p:has(> input[type="checkbox"]) {
+    flex-wrap: wrap;
+}
+
+.form-status {
+    min-height: 1.5rem;
+    margin-top: var(--space-3);
+    font-weight: 600;
+}
+
+.form-status--ok {
+    color: var(--color-success);
+}
+
+.form-status--error {
+    color: var(--color-error);
+}
+
+.summary__note {
+    min-height: 1.5rem;
+    margin-bottom: var(--space-2);
+    color: var(--color-error);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.modal {
+    width: min(92vw, 28rem);
+    padding: 0;
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--color-primary);
+    border-radius: var(--radius-md);
+}
+
+.modal::backdrop {
+    background: rgb(20 9 10 / 0.7);
+}
+
+.modal__body {
+    padding: var(--space-4);
+}
+
+.modal__list {
+    display: grid;
+    gap: var(--space-2);
+    margin: var(--space-3) 0;
+    padding: 0;
+    list-style: none;
+}
+
+.modal__list li {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-2);
+    padding-bottom: var(--space-2);
+    border-bottom: 1px dashed var(--border);
+}
+
+.modal__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    justify-content: flex-end;
+}
+
+.modal__actions [hidden] {
+    display: none;
+}
+
+/* Читабельні червоні тексти на темному тлі */
+[data-theme="dark"] .field-error,
+[data-theme="dark"] .form-status--error,
+[data-theme="dark"] .summary__note {
+    color: #FF9C94;
+}
+
+[data-theme="dark"] .form-status--ok {
+    color: #6FD18B;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    :root:not([data-theme="light"]) .field-error,
+    :root:not([data-theme="light"]) .form-status--error,
+    :root:not([data-theme="light"]) .summary__note {
+        color: #FF9C94;
+    }
+
+    :root:not([data-theme="light"]) .form-status--ok {
+        color: #6FD18B;
+    }
+}
+
+@media (min-width: 768px) {
+    .filters--sort {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
+    }
+}
