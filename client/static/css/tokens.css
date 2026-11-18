@@ -40,3 +40,20 @@
     --seat-free: var(--neutral-700);
     --seat-taken: var(--neutral-600);
 }
+
+[data-theme="light"] {
+    --bg: var(--neutral-50);
+    --surface: #fff;
+    --text: var(--neutral-900);
+    --text-muted: var(--neutral-500);
+    --color-link: #0369A1;
+
+    --seat-free: var(--neutral-100);
+    --seat-selected: var(--color-accent);
+    --seat-taken: var(--neutral-300);
+    --seat-vip: #0487D9;
+
+    --border: var(--neutral-200);
+    --field-border: var(--neutral-500);
+    color-scheme: light;
+}
