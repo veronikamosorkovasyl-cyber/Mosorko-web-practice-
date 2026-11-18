@@ -258,10 +258,24 @@
         </ul>
         <p>Всього: <output id="ticket-count">0</output> квитків</p>
         <p class="summary__total">Сума: <output id="ticket-total">0</output> грн</p>
+        <p id="seat-note" class="summary__note" role="status"></p>
         <button class="btn" type="submit" disabled>Продовжити</button>
       </aside>
     </form>
   </main>
+
+  <dialog id="confirm-modal" class="modal" aria-labelledby="modal-title">
+    <div class="modal__body">
+      <h2 id="modal-title">Підтвердження замовлення</h2>
+      <p id="modal-text">Перевірте обрані місця та підтвердіть замовлення.</p>
+      <ul id="modal-list" class="modal__list"></ul>
+      <p class="summary__total">Сума: <output id="modal-total">0</output> грн</p>
+      <div class="modal__actions">
+        <button class="btn btn--secondary" type="button" data-close>Закрити</button>
+        <button class="btn" type="button" id="confirm-btn">Підтвердити</button>
+      </div>
+    </div>
+  </dialog>
 
   <footer class="site-footer">
     <a class="logo" href="index.html">
@@ -287,5 +301,6 @@
     <p><small>Cinema-Ua © <time datetime="2026">2026</time>. Навчальний проєкт, сайт не справжній.</small></p>
   </footer>
   <script type="module" src="js/ui.js"></script>
+  <script type="module" src="js/seats.js"></script>
 </body>
 </html>
