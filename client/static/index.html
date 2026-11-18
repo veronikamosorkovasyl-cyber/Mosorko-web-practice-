@@ -15,6 +15,11 @@
   <link rel="icon" href="assets/Logo_Cinema.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    document.documentElement.dataset.theme =
+      localStorage.getItem('theme') ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Перейти до основного вмісту</a>
@@ -24,6 +29,10 @@
       <span>Cinema-Ua</span>
     </a>
     <nav aria-label="Головна навігація">
+        <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Темна тема">
+          <img class="theme-toggle__icon theme-toggle__icon--sun" src="assets/icon-sun.svg" alt="" width="24" height="24">
+          <img class="theme-toggle__icon theme-toggle__icon--moon" src="assets/icon-moon.svg" alt="" width="24" height="24">
+        </button>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">Меню</button>
       <ul id="nav-list">
           <li><a href="index.html" aria-current="page">Головна</a></li>
