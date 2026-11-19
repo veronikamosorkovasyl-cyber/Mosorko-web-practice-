@@ -7,9 +7,20 @@ import { logger, notFound, errorHandler } from './middleware.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const origins = process.env.CLIENT_ORIGIN?.split(',');
+const allowed = (process.env.CLIENT_ORIGIN ?? '')
+  .split(',')
+  .map((o) => o.trim().replace(/\/$/, ''))
+  .filter(Boolean);
 
-app.use(cors({ origin: origins ?? '*' }));
+const previewRe = /^https:\/\/mosorko-web-practice-[a-z0-9-]+\.vercel\.app$/;
+
+app.use(cors({
+  origin(origin, cb) {
+    // запити без Origin (Postman, curl) пропускаємо
+    if (!origin) return cb(null, true);
+    cb(null, allowed.includes(origin) || previewRe.test(origin));
+  },
+}));
 app.use(express.json());
 app.use(logger);
 
