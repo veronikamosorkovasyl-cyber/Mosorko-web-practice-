@@ -46,14 +46,14 @@ Cinema-Ua показує афішу фільмів, дає відфільтру�
 
 | Головна | Вибір місця |
 | --- | --- |
-| ![Головна](<img width="1920" height="1200" alt="зображення" src="https://github.com/user-attachments/assets/8338d039-f79c-46d8-a4d4-9c1ac5e37abc" />
+| ![Головна (<img width="1186" height="1024" alt="зображення" src="https://github.com/user-attachments/assets/6a5e5b10-267c-41b3-a20b-106ef04d0744" />
 ) | ![Вибір місця](<img width="1920" height="1200" alt="зображення" src="https://github.com/user-attachments/assets/21501a30-66cf-4120-82b1-6c6d47114040" />
 ) |
 
 | Мобільна версія | Темна тема |
 | --- | --- |
-| ![Mobile](<img width="1920" height="1200" alt="зображення" src="https://github.com/user-attachments/assets/e84ae3b4-a8b3-4c76-91b7-e2680bd3891c" />
-) | ![Dark](<img width="1920" height="1200" alt="зображення" src="https://github.com/user-attachments/assets/b0a65989-c261-44f7-8550-463d9f08ae1d" />
+| ![Mobile](<img width="284" height="870" alt="зображення" src="https://github.com/user-attachments/assets/06278274-1f11-41a9-a3ed-732f18df0acf" />
+) | ![Dark](<img width="272" height="886" alt="зображення" src="https://github.com/user-attachments/assets/430847a6-3500-42f0-8c11-e8eec7e640f8" />
 ) |
 
 ## Запуск локально
