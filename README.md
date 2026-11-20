@@ -11,8 +11,7 @@
 
 - Опублікований сайт: https://mosorko-web-practice.vercel.app
 - Макет у Figma: https://www.figma.com/design/XHcTn6yepTD4zjSulpyGdn/Cinema
-- API: `<посилання на сервер на Render>`
-- Звіт: [docs/report.pdf](docs/report.pdf)
+- API: https://mosorko-web-practice.onrender.com/
 
 ## Про проєкт
 
